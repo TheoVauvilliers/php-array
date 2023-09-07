@@ -21,7 +21,7 @@ class Speaker
         echo '<br/><br/>';
 
         echo 'Mine : <br/>';
-        var_dump($values['original']);
+        var_dump($values['mine']);
         echo '<br/><br/>';
         echo '====================';
         echo '<br/><br/>';
