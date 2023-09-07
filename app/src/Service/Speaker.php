@@ -17,11 +17,11 @@ class Speaker
         self::initialArray($array);
 
         echo 'Original : <br/>';
-        var_dump($values['original']);
+        echo json_encode($values['original']);
         echo '<br/><br/>';
 
         echo 'Mine : <br/>';
-        var_dump($values['mine']);
+        echo json_encode($values['mine']);
         echo '<br/><br/>';
         echo '====================';
         echo '<br/><br/>';
@@ -30,7 +30,7 @@ class Speaker
     private static function initialArray(array $array): void
     {
         echo 'Initial array : <br/>';
-        var_dump($array);
+        echo json_encode($array);
         echo '<br/><br/>';
     }
 }
