@@ -1,10 +1,10 @@
 {
-    "description": "Recreate PHP array function",
+    "description": "Recreate PHP array functions",
     "type": "project",
     "require": {
         "fakerphp/faker": "^1.23"
     },
-    "license": "MIT",
+    "license": "",
     "autoload": {
         "psr-4": {
             "App\\": "src/"
