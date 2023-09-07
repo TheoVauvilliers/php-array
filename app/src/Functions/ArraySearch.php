@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Function;
+namespace App\Functions;
 
 use App\Interface\RunnableInterface;
 
@@ -22,7 +22,7 @@ class ArraySearch implements RunnableInterface
         ];
     }
 
-    public static function arraySearch(mixed $needle, array $haystack, bool $strict = false): int|string|false
+    private static function arraySearch(mixed $needle, array $haystack, bool $strict = false): int|string|false
     {
         $result = false;
 

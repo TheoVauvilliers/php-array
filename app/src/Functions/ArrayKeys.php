@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Function;
+namespace App\Functions;
 
 use App\Interface\RunnableInterface;
 
@@ -19,7 +19,7 @@ class ArrayKeys implements RunnableInterface
         ];
     }
 
-    public static function arrayKeys(array $array): array
+    private static function arrayKeys(array $array): array
     {
         $result = [];
 

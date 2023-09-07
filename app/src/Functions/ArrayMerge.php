@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Function;
+namespace App\Functions;
 
 use App\Interface\RunnableInterface;
 
@@ -21,7 +21,7 @@ class ArrayMerge implements RunnableInterface
         ];
     }
 
-    public static function arrayMerge(array ...$arrays): array
+    private static function arrayMerge(array ...$arrays): array
     {
         $result = [];
         $index = 0;

@@ -1,0 +1,18 @@
+{
+    "description": "Recreate PHP array function",
+    "type": "project",
+    "require": {
+        "fakerphp/faker": "^1.23"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Théo Vauvilliers"
+        }
+    ]
+}
