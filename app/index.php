@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\DataFixtures\MultidimensionalArrayFixtures;
+use App\DataFixtures\MultidimensionalAssociativeArrayFixtures;
 use App\DataFixtures\SimpleArrayFixtures;
+use App\DataFixtures\SimpleAssociativeArrayFixtures;
 use App\Functions\ArrayChunk;
 use App\Functions\ArrayKeys;
 use App\Functions\ArrayMerge;
@@ -13,12 +16,10 @@ use App\Service\Speaker;
 
 require_once 'vendor/autoload.php';
 
-$simpleArrayFixtures = new SimpleArrayFixtures();
-$simpleArray = $simpleArrayFixtures->load();
+$array = (new SimpleAssociativeArrayFixtures())->load();
 
-$array = ['test', 'toto', 'tata', 'titi'];
+Speaker::execute(new ArraySearch(), $array, ['needle' =>  'qui', 'strict' => true]);
+Speaker::execute(new ArrayKeys(), $array);
+Speaker::execute(new ArrayMerge(), $array, ['array' => (new SimpleArrayFixtures)->load()]);
+Speaker::execute(new ArrayChunk(), $array,  ['length' => 5, 'preserve_keys' => false]);
 
-Speaker::execute(new ArraySearch(), $simpleArray, ['needle' =>  'qui', 'strict' => true]);
-Speaker::execute(new ArrayKeys(), $simpleArray);
-Speaker::execute(new ArrayMerge(), $simpleArray, ['array' => ['tutu', 'titi', 'two'  => 'tata', 'test']]);
-Speaker::execute(new ArrayChunk(), $simpleArray,  ['length' => 5, 'preserve_keys' => false]);
