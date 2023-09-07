@@ -9,7 +9,7 @@ use Faker\Generator;
 abstract class AbstractArrayFixtures
 {
     protected const MIN_ARRAY_ENTRY = 10;
-    protected const MAX_ARRAY_ENTRY = 100;
+    protected const MAX_ARRAY_ENTRY = 50;
 
     protected readonly Generator $faker;
 
